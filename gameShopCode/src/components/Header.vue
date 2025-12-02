@@ -38,7 +38,7 @@ import { cart } from "../store/CartStore"
           :aria-label="`Carrito de compras${cart.length > 0 ? `, ${cart.length} artículos` : ', vacío'}`"
           class="relative w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center hover:opacity-70 transition-opacity focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-[#020617] rounded"
         >
-          <img src="../../icon/icon-cart.svg" alt="" class="w-full h-full object-contain" aria-hidden="true">
+          <img src="../../public/icon/cart.svg" alt="" class="w-full h-full object-contain" aria-hidden="true">
           
           <span 
             v-if="cart.length > 0" 
