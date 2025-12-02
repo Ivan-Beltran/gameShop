@@ -6,17 +6,17 @@ import SecctionTitle from '@/components/SecctionTitle.vue';
  import { ref , computed} from 'vue';
 
 const products = ref([
-  { name: "mario all star", imagen: "../public/img/3DALLSTAR.png", price: "20.99", category: "mario" },
-  { name: "pokemon", imagen: "../public/img/POKEN.jpg", price: "20.99", category: "nuevo" },
-  { name: "expedition 33", imagen: "../public/img/Expedition33.png", price: "20.99", category: "nuevo" },
-  { name: "zelda BOTW", imagen: "../public/img/BOTW.png", price: "20.99", category: "aventura" },
-  { name: "mincecraft", imagen: "../public/img/MINECRAFT.jpg", price: "20.99", category: "aventura" },
-  { name: "mario maker", imagen: "../public/img/mariomaker.png", price: "20.99", category: "mario" },
-  { name: "FC 26", imagen: "../public/img/fc26.png", price: "20.99", category: "nuevo" },
-  { name: "zelda links awakening", imagen: "../public/img/ZLA.jpg", price: "20.99", category: "aventura" },
-  { name: "smash ultimate", imagen: "../public/img/SMASH ULTIMATE.png", price: "20.99", category: "mario" },
-  { name: "sparkin zero", imagen: "../public/img/sparkinzero.png", price: "20.99", category: "nuevo" },
-  { name: "mario odyssey", imagen: "../public/img/SMO.jpg", price: "20.99", category: "mario" },
+  { name: "mario all star", imagen: "/img/3DALLSTAR.png", price: "20.99", category: "mario" },
+  { name: "pokemon", imagen: "/img/POKEN.jpg", price: "20.99", category: "nuevo" },
+  { name: "expedition 33", imagen: "/img/Expedition33.png", price: "20.99", category: "nuevo" },
+  { name: "zelda BOTW", imagen: "/img/BOTW.png", price: "20.99", category: "aventura" },
+  { name: "mincecraft", imagen: "/img/MINECRAFT.jpg", price: "20.99", category: "aventura" },
+  { name: "mario maker", imagen: "/img/mariomaker.png", price: "20.99", category: "mario" },
+  { name: "FC 26", imagen: "/img/fc26.png", price: "20.99", category: "nuevo" },
+  { name: "zelda links awakening", imagen: "/img/ZLA.jpg", price: "20.99", category: "aventura" },
+  { name: "smash ultimate", imagen: "/img/SMASH ULTIMATE.png", price: "20.99", category: "mario" },
+  { name: "sparkin zero", imagen: "/img/sparkinzero.png", price: "20.99", category: "nuevo" },
+  { name: "mario odyssey", imagen: "/img/SMO.jpg", price: "20.99", category: "mario" },
 ])
 
 const newReleases = computed(() => 
