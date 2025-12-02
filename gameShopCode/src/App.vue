@@ -5,7 +5,7 @@ import HomePage from './pages/HomePage.vue';
 
 
 <template>
-  <div class="min-h-screen">
+  <div class="min-h-screen w-full">
     <router-view />
   </div>
 </template>
