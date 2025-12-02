@@ -60,9 +60,9 @@ import { cart } from "../store/CartStore"
         </router-link>
 
         <!-- Iniciar sesión -->
-        <a 
-          href="/login"
-          aria-label="Iniciar sesión"
+        <router-link 
+          to="/login"
+          aria-label="Mi perfil"
           class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center hover:opacity-70 transition-opacity focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-[#020617] rounded"
         >
           <svg 
@@ -78,7 +78,7 @@ import { cart } from "../store/CartStore"
             <path stroke-linecap="round" stroke-linejoin="round"
               d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
           </svg>
-        </a>
+          </router-link>
       </div>
     </div>
   </header>
