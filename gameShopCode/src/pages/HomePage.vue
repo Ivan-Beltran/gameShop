@@ -7,7 +7,7 @@ import Footer from '@/components/Footer.vue';
 
 const products = ref([
   { name: "Battlefield 6", imagen: "/img/batelfield6.jpeg", price: "20.99", category: "nuevo lanzamiento" },
-  { name: "cyberpunk", imagen: "../public/img/ciberpunk.png", price: "20.99", category: "nuevo lanzamiento" },
+  { name: "cyberpunk", imagen: "/img/ciberpunk.png", price: "20.99", category: "nuevo lanzamiento" },
   { name: "expedition 33", imagen: "../public/img/Expedition33.png", price: "20.99", category: "nuevo lanzamiento" },
   { name: "god of war 4", imagen: "../public/img/GOW.jpg", price: "20.99", category: "accion" },
   { name: "ghost Of Tesuchimna", imagen: "../public/img/ghost.jpg", price: "20.99", category: "aventura" },
