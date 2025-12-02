@@ -27,11 +27,10 @@ const footerLinks = {
 </script>
 
 <template>
-  <footer class="bg-[#1a1a1a] text-gray-300 border-t border-[#3a3a3a]">
+  <footer class="bg-[#1a1a1a] text-gray-300 border-t border-[#3a3a3a]" role="contentinfo">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      
-      <!-- Grid principal -->
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-8 ">
+    
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-8">
         
         <!-- Columna 1: Branding -->
         <div class="space-y-4 flex flex-col items-center">
@@ -40,81 +39,88 @@ const footerLinks = {
             Tu tienda de videojuegos favorita. Los mejores títulos al mejor precio.
           </p>
           
-          <!-- Redes Sociales -->
-          <div class="flex gap-4 pt-2">
-            <a 
-              v-for="social in socialLinks" 
-              :key="social.name"
-              :href="social.url"
-              :aria-label="social.name"
-              class="w-10 h-10 bg-[#272727] rounded-full flex items-center justify-center
-                     hover:bg-amber-400 transition-colors duration-300 group"
-            >
-              <svg 
-                class="w-5 h-5 fill-gray-300 group-hover:fill-black transition-colors"
-                viewBox="0 0 24 24"
-              >
-                <path :d="social.icon" />
-              </svg>
-            </a>
-          </div>
+          <!-- MEJORA: nav con aria-label -->
+          <nav aria-label="Redes sociales">
+            <ul class="flex gap-4 pt-2">
+              <li v-for="social in socialLinks" :key="social.name">
+                <a 
+                  :href="social.url"
+                  :aria-label="`Visitar nuestra página de ${social.name}`"
+                  class="w-10 h-10 bg-[#272727] rounded-full flex items-center justify-center
+                         hover:bg-amber-400 transition-colors duration-300 group focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-[#1a1a1a]"
+                >
+                  <svg 
+                    class="w-5 h-5 fill-gray-300 group-hover:fill-black transition-colors"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <path :d="social.icon" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-        
-
-        <!-- Columna 3: Soporte -->
-        <div>
+        <!-- MEJORA: nav con aria-label para navegación -->
+        <nav aria-label="Enlaces de soporte">
           <h4 class="text-white font-semibold mb-4">Soporte</h4>
           <ul class="space-y-2">
             <li v-for="link in footerLinks.support" :key="link.name">
               <a 
                 :href="link.url"
-                class="text-sm text-gray-400 hover:text-amber-400 transition-colors duration-200"
+                class="text-sm text-gray-400 hover:text-amber-400 transition-colors duration-200 focus:outline-none focus:underline"
               >
                 {{ link.name }}
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
 
-        <!-- Columna 4: Legal -->
-        <div>
+        <nav aria-label="Enlaces legales">
           <h4 class="text-white font-semibold mb-4">Legal</h4>
           <ul class="space-y-2">
             <li v-for="link in footerLinks.legal" :key="link.name">
               <a 
                 :href="link.url"
-                class="text-sm text-gray-400 hover:text-amber-400 transition-colors duration-200"
+                class="text-sm text-gray-400 hover:text-amber-400 transition-colors duration-200 focus:outline-none focus:underline"
               >
                 {{ link.name }}
               </a>
             </li>
           </ul>
-        </div>
+        </nav>
 
       </div>
 
-      <!-- Newsletter -->
+      <!-- MEJORA: Formulario con labels y manejo de eventos -->
       <div class="border-t border-[#3a3a3a] pt-8 pb-8">
-        <div class="max-w-md mx-auto text-center">
-          <h4 class="text-white font-semibold mb-2">Suscríbete a nuestro newsletter</h4>
-          <p class="text-sm text-gray-400 mb-4">Recibe las últimas ofertas y novedades</p>
+        <form @submit.prevent="handleNewsletterSubmit" class="max-w-md mx-auto">
+          <h4 class="text-white font-semibold mb-2 text-center">Suscríbete a nuestro newsletter</h4>
+          <p class="text-sm text-gray-400 mb-4 text-center">Recibe las últimas ofertas y novedades</p>
+          
           <div class="flex gap-2">
+            <label for="newsletter-email" class="sr-only">Correo electrónico</label>
             <input 
+              id="newsletter-email"
               type="email" 
               placeholder="tu@email.com"
+              required
+              aria-required="true"
               class="flex-1 px-4 py-2 bg-[#272727] border border-[#3a3a3a] rounded-lg
-                     text-white placeholder-gray-500 focus:outline-none focus:border-amber-400
+                     text-white placeholder-gray-500 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-400
                      transition-colors"
             />
             <button 
+              type="submit"
               class="px-6 py-2 bg-amber-400 text-black font-semibold rounded-lg
-                     hover:bg-amber-500 transition-colors duration-200"
+                     hover:bg-amber-500 focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-[#1a1a1a] transition-colors duration-200"
             >
               Suscribirse
             </button>
           </div>
-        </div>
+        </form>
       </div>
 
       <!-- Copyright -->

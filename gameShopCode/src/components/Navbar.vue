@@ -5,7 +5,6 @@
   <nav class="w-full">
     <ul class="flex flex-row justify-center items-center gap-5 sm:gap-2 md:gap-10 lg:gap-1 text-white">
 
-      <!-- Item PlayStation -->
       <li>
         <router-link 
           to="/playstation" 
@@ -20,7 +19,7 @@
         </router-link>
       </li>
 
-      <!-- Item Xbox -->
+
        
       <li>
         <router-link 
@@ -36,7 +35,6 @@
         </router-link>
       </li>
 
-      <!-- Item Nintendo -->
       <li>
         <router-link 
           to="/nintendo" 
@@ -51,7 +49,6 @@
         </router-link>
       </li>
 
-      <!-- Item PC -->
       <li>
         <router-link 
           to="/pcPage" 
@@ -70,31 +67,3 @@
   </nav>
 </template>
 
-
-
-<!-- Menú siempre visible -->
-<!-- <ul
-      class="hidden md:flex md:flex-row md:gap-10 gap-4
-         bg-amber-200 md:bg-transparent p-4 md:p-0 
-         rounded shadow md:shadow-none"
-    >
-      <li class="flex items-center gap-2">
-        <img src="../../public/icon/icon-swt.svg" class="w-5" />
-        <span>Play Station</span>
-      </li>
-
-      <li class="flex items-center gap-2">
-        <img src="../../public/icon/icon-swt.svg" class="w-5" />
-        <span>Xbox</span>
-      </li>
-
-      <li class="flex items-center gap-2">
-        <img src="../../public/icon/icon-swt.svg" class="w-5" />
-        <span>Nintendo</span>
-      </li>
-
-      <li class="flex items-center gap-2">
-        <img src="../../public/icon/icon-swt.svg" class="w-5" />
-        <span>PC Gaming</span>
-      </li>
-    </ul> -->

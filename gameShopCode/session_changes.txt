@@ -1,0 +1,72 @@
+RESUMEN DE CAMBIOS - SESIÓN DE TRABAJO
+
+1. ARCHIVOS CREADOS
+-------------------
+
+A. login.html
+   - Propósito: Página de inicio de sesión independiente.
+   - Diseño: Fondo oscuro (#272727), acentos naranja (#ff761b), fuente Inter.
+   - Elementos:
+     * Logo de GameCenter.
+     * Formulario con campos de Correo y Contraseña.
+     * Botón "Ingresar".
+     * Enlace a la página de registro.
+     * Enlace para volver al inicio.
+   - Funcionalidad:
+     * Valida las credenciales ingresadas comparándolas con los datos en localStorage.
+     * Redirige a la página principal si son correctas.
+     * Muestra alerta si fallan.
+
+B. register.html
+   - Propósito: Página de registro de nuevos usuarios.
+   - Diseño: Idéntico al login para consistencia.
+   - Elementos:
+     * Campos: Nombre Completo, Correo, Contraseña, Confirmar Contraseña.
+     * Validación de coincidencia de contraseñas.
+   - Funcionalidad:
+     * Guarda los datos (Nombre, Email, Password) en el localStorage del navegador.
+     * Redirige a la página principal tras el registro exitoso.
+
+C. src/pages/UserProfile.vue
+   - Propósito: Página interna de Vue para mostrar el perfil del usuario.
+   - Diseño: Integrado con el Header y Footer de la aplicación.
+   - Funcionalidad:
+     * Recupera el nombre del usuario desde localStorage.
+     * Muestra un mensaje de bienvenida personalizado.
+
+2. ARCHIVOS MODIFICADOS
+-----------------------
+
+A. src/components/Header.vue
+   - Cambios:
+     * Se actualizó el icono de usuario (muñequito) para usar <router-link> y dirigir a '/profile'.
+     * Se agregó un nuevo icono (puerta/salida) que redirige a 'login.html'.
+
+B. src/router/index.js
+   - Cambios:
+     * Se importó el componente UserProfile.
+     * Se agregó la ruta '/profile' asociada al componente UserProfile.
+
+3. FLUJO DE FUNCIONAMIENTO IMPLEMENTADO
+---------------------------------------
+
+1. Registro:
+   - El usuario entra a register.html.
+   - Llena sus datos.
+   - Al dar click en "Registrarse", el script guarda 'userName', 'userEmail' y 'userPassword' en el navegador y redirige al Home.
+
+2. Login:
+   - El usuario entra a login.html.
+   - Ingresa correo y contraseña.
+   - El script compara estos valores con 'userEmail' y 'userPassword' almacenados.
+   - Si coinciden -> Redirige al Home.
+   - Si no coinciden -> Muestra alerta "El correo o la contraseña no coinciden".
+
+3. Perfil:
+   - Desde el Home, al dar click al icono de usuario, se carga la vista de Perfil.
+   - Esta vista lee 'userName' del almacenamiento y lo muestra en pantalla.
+
+4. Navegación:
+   - Se puede navegar fluidamente entre Login <-> Registro.
+   - Se puede volver al Home desde ambas páginas.
+   - Se puede ir al Login desde el Header del Home.

@@ -5,6 +5,7 @@ import Xbox from '@/pages/Xbox.vue'
 import Nintendo from '@/pages/Nintendo.vue'
 import PcPage from '@/pages/PcPage.vue'
 import SalePage from '@/pages/SalePage.vue'
+import UserProfile from '@/pages/UserProfile.vue'
 
 
 const routes = [
@@ -25,18 +26,23 @@ const routes = [
   },
   {
     path: '/nintendo',
-    name:'nintendo',
-    component:Nintendo
+    name: 'nintendo',
+    component: Nintendo
   },
   {
-    path:'/pcPage',
-    name:'pcPage',
-    component:PcPage
+    path: '/pcPage',
+    name: 'pcPage',
+    component: PcPage
   },
   {
-    path:'/SalePage',
-    name:'salePage',
-    component:SalePage
+    path: '/SalePage',
+    name: 'salePage',
+    component: SalePage
+  },
+  {
+    path: '/profile',
+    name: 'UserProfile',
+    component: UserProfile
   }
 ]
 
