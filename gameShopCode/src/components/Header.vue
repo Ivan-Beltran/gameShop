@@ -61,7 +61,7 @@ import { cart } from "../store/CartStore"
 
         <!-- Iniciar sesión -->
         <a 
-          href="/login.html"
+          href="/login"
           aria-label="Iniciar sesión"
           class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 flex items-center justify-center hover:opacity-70 transition-opacity focus:outline-none focus:ring-2 focus:ring-amber-400 focus:ring-offset-2 focus:ring-offset-[#020617] rounded"
         >

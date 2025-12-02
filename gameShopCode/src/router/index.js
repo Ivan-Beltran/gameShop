@@ -6,6 +6,8 @@ import Nintendo from '@/pages/Nintendo.vue'
 import PcPage from '@/pages/PcPage.vue'
 import SalePage from '@/pages/SalePage.vue'
 import UserProfile from '@/pages/UserProfile.vue'
+import Login from '@/pages/Login.vue'
+import Register from '@/pages/Register.vue'
 
 
 const routes = [
@@ -43,6 +45,16 @@ const routes = [
     path: '/profile',
     name: 'UserProfile',
     component: UserProfile
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
+  }
+  ,{
+    path: '/register',
+    name: 'register',
+    component: Register
   }
 ]
 
